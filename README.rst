@@ -1,6 +1,6 @@
-.. image:: https://travis-ci.org/sirosen/git-fortune.svg?branch=master
+.. image:: https://travis-ci.com/sirosen/git-fortune.svg?branch=master
     :alt: build status
-    :target: https://travis-ci.org/sirosen/git-fortune
+    :target: https://travis-ci.com/sirosen/git-fortune
 
 .. image:: https://img.shields.io/pypi/v/git-fortune.svg
     :alt: Latest Released Version
