@@ -1,8 +1,10 @@
 CHANGELOG
 ---------
 
-Unreleased
-~~~~~~~~~~
+0.0.3
+~~~~~
+
+Fix for handling of line endings on Windows
 
 0.0.2
 ~~~~~
