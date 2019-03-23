@@ -25,10 +25,8 @@ showvars:
 	.venv/bin/pip install -e '.[development]'
 localdev: .venv
 
-build: $(VIRTUALENV)
 
-
-release: $(VIRTUALENV)/bin/twine
+release: .venv
 	rm -rf dist/
 	.venv/bin/python setup.py sdist bdist_wheel
 	.venv/bin/twine upload dist/*
