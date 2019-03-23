@@ -5,8 +5,8 @@ First off, thank you so much for taking the time to contribute! :+1:
 
 Guidelines:
 
-  - All code is autoformatted with https://github.com/ambv/black[black] and
-     https://github.com/timothycrosley/isort[isort]. You may run
+  - All code is autoformatted with `black <https://github.com/ambv/black>`_ and
+     `isort <https://github.com/timothycrosley/isort>`_. You may run
       `make autoformat` to do this or configure these tools for use in your
       editor.
   - All code must pass `make test`, which runs linting and tests.
@@ -18,13 +18,11 @@ NOTE: `black` requires python3.6+, but the code does not
 Expectations for Pull Requests
 ------------------------------
 
-  - *Make sure it merges cleanly*. We may request that you rebase if your PR
-      has merge conflicts.
+  - *Make sure it merges cleanly*
   - *List any issues closed by the pull request*
-  - *Squash intermediate and fixup commits*. We recommend running
-    `git rebase --interactive` prior to submitting a pull request.
+  - *Squash intermediate and fixup commits*
 
-These are our guidelines for good commit messages:
+Guidelines for good commit messages:
 
   - No lines over 72 characters
   - No GitHub emoji -- use your words

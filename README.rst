@@ -49,14 +49,3 @@ Testing, Development, and Contributing
 Go to the
 `CONTRIBUTING <https://github.com/sirosen/git-fortune/blob/master/CONTRIBUTING.adoc>`_
 guide for detail.
-
-CHANGELOG
----------
-
-Unreleased
-~~~~~~~~~~
-
-0.0.1
-~~~~~
-
-Initial version
