@@ -18,9 +18,9 @@ def rand_tip(tipcollection):
 
 
 def get_tip(args):
-    if args.id:
+    if args.id is not None:
         return TIPS_BY_ID[args.id]
-    elif args.category:
+    elif args.category is not None:
         return rand_tip(TIPS_BY_CATEGORY[args.category])
     else:
         return rand_tip(TIPS_BY_ID.values())

@@ -45,7 +45,7 @@ class VersionAction(argparse.Action):
 
 
 def _line_endings():
-    if os.name == "nt":
+    if os.name == "nt":  # pragma: no cover
         return "\r\n"
     return "\n"
 
