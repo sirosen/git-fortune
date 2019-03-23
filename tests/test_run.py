@@ -1,5 +1,6 @@
 import subprocess
 
+from git_fortune._compat import fix_line_endings
 from git_fortune.version import __version__
 
 
@@ -7,11 +8,13 @@ def test_help(capfd):
     subprocess.check_call(["git-fortune", "-h"])
     captured = capfd.readouterr()
     assert (
-        """
+        fix_line_endings(
+            """
 A fortune-like command for showing git tips
 
 Invoke it as 'git-fortune' or 'git fortune'
 """
+        )
         in captured.out
     )
 
@@ -24,7 +27,8 @@ def test_version(capfd):
 
 def test_tip_boxformat(capfd):
     subprocess.check_call(["git-fortune", "--id", "3"])
-    tip3boxbody = """\
+    tip3boxbody = fix_line_endings(
+        """\
 +-------------------------------------------------------------------------------+
 | TIP #3                                                                        |
 |                                                                               |
@@ -34,13 +38,14 @@ def test_tip_boxformat(capfd):
 |                                                                               |
 +-------------------------------------------------------------------------------+
 """
+    )
     captured = capfd.readouterr()
     assert captured.out == tip3boxbody
 
 
 def test_tip_plainformat(capfd):
     subprocess.check_call(["git-fortune", "--format", "plain", "--id", "1"])
-    tip1plainbody = (
+    tip1plainbody = fix_line_endings(
         "Modify your last commit before pushing with `git commit --amend`.\n"
     )
     captured = capfd.readouterr()

@@ -1,8 +1,10 @@
 """
 py2 compatibility
+windows compatibility
 """
 
 import argparse
+import os
 import sys
 
 
@@ -40,3 +42,13 @@ class VersionAction(argparse.Action):
 
         parser._print_message(formatter.format_help(), sys.stdout)
         parser.exit()
+
+
+def _line_endings():
+    if os.name == "nt":
+        return "\r\n"
+    return "\n"
+
+
+def fix_line_endings(s):
+    return _line_endings().join(s.split("\n"))
