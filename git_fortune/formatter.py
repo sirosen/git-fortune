@@ -1,6 +1,3 @@
-from ._compat import fix_line_endings
-
-
 class TipFormatter(object):
     def render(self, tip):
         raise NotImplementedError
@@ -8,7 +5,7 @@ class TipFormatter(object):
 
 class PlainTipFormatter(TipFormatter):
     def render(self, tip):
-        print(fix_line_endings(tip.tipstr))
+        print(tip.tipstr)
 
 
 class BoxTipFormatter(TipFormatter):

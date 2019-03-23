@@ -1,6 +1,5 @@
 """
-py2 compatibility
-windows compatibility
+py2 compatibility and any platform-compatibility issues we might face
 """
 
 import argparse
@@ -35,7 +34,7 @@ class VersionAction(argparse.Action):
 
     def __call__(self, parser, namespace, values, option_string=None):
         version = self.version
-        if version is None:  # pragma: no cover
+        if version is None:
             version = parser.version
         formatter = parser._get_formatter()
         formatter.add_text(version)
@@ -44,11 +43,12 @@ class VersionAction(argparse.Action):
         parser.exit()
 
 
-def _line_endings():
-    if os.name == "nt":  # pragma: no cover
-        return "\r\n"
-    return "\n"
+def on_windows():
+    return os.name == "nt"
 
 
 def fix_line_endings(s):
-    return _line_endings().join(s.split("\n"))
+    s = s.replace("\r\n", "\n")
+    if on_windows():
+        s = s.replace("\n", "\r\n")
+    return s
