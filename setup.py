@@ -20,6 +20,7 @@ setup(
         "development": [
             # testing
             "pytest>=4.3.1,<5",
+            "pytest-cov>=2.6.1,<3",
             # linting
             "flake8>=3.7.7,<4.0",
             "isort>=4.3.15,<5.0",

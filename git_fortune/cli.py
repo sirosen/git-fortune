@@ -7,6 +7,7 @@ Invoke it as 'git-fortune' or 'git fortune'
 import argparse
 import random
 
+from . import _compat
 from .database import TIPS_BY_CATEGORY, TIPS_BY_ID
 from .formatter import ALL_FORMATTERS
 from .version import __version__
@@ -30,7 +31,9 @@ def main():
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument(
-        "--version", action="version", version="%(prog)s " + str(__version__)
+        "--version",
+        action=_compat.VersionAction,
+        version="%(prog)s " + str(__version__),
     )
     parser.add_argument(
         "--format",
