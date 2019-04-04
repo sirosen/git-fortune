@@ -1,6 +1,11 @@
 CHANGELOG
 ---------
 
+0.0.4
+-----
+
+Tip boxes are better formatted for MOTD usage.
+
 0.0.3
 ~~~~~
 
