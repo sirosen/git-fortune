@@ -20,7 +20,7 @@ class BoxTipFormatter(TipFormatter):
         lines = tip.tipstr.split("\n")
         lines.append("")
         lines.insert(0, "")
-        lines.insert(0, "TIP #{}".format(tip.tipid))
+        lines.insert(0, "GIT TIP #{}".format(tip.tipid))
         width = max(len(l) for l in lines)
 
         print("{}{}{}".format(self.corner, self.top * (width + 2), self.corner))

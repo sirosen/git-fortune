@@ -30,7 +30,7 @@ def test_tip_boxformat(capfd):
     tip3boxbody = fix_line_endings(
         """\
 +-------------------------------------------------------------------------------+
-| TIP #3                                                                        |
+| GIT TIP #3                                                                    |
 |                                                                               |
 | `git log --graph` can show you a tree-like representation of the git history. |
 |                                                                               |
@@ -56,14 +56,14 @@ def test_noargs(capfd):
     """just make sure it doesn't crashfail"""
     subprocess.check_call(["git-fortune"])
     captured = capfd.readouterr()
-    assert "TIP #" in captured.out  # from the box format
+    assert "GIT TIP #" in captured.out  # from the box format
 
 
 def test_category(capfd):
     """just make sure it doesn't crashfail"""
     subprocess.check_call(["git-fortune", "--category", "diff"])
     captured = capfd.readouterr()
-    assert "TIP #" in captured.out  # from the box format
+    assert "GIT TIP #" in captured.out  # from the box format
 
 
 def test_category_and_id_mutex(capfd):
