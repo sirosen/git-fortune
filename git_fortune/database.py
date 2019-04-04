@@ -207,7 +207,7 @@ Deleting a branch from a remote is doable in a couple of ways, but one of the
 more explicit ones is
 
   git push --delete $REMOTE $BRANCH
-""",
+"""
 )
 
 
@@ -216,5 +216,5 @@ add_tip(
 git will automatically pick up on any commands you have with `git-` as a
 prefix. If you save a script as `git-foo` and add it to your PATH, then you can
 run it with `git foo`
-""",
+"""
 )
